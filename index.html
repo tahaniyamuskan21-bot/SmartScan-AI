@@ -1,0 +1,197 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SmartScan-AI | Object Scanner</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#D8C3E5">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+
+        <div class="logo">
+            <span class="logo-symbol">✦</span>
+            SmartScan-AI
+        </div>
+
+        <div class="header-tag">
+            CAMERA OBJECT SCANNER
+        </div>
+
+    </header>
+
+
+    <!-- Main content -->
+    <main class="main-container">
+
+        <!-- Introduction -->
+        <section class="intro">
+
+            <span class="eyebrow">
+                DISCOVER THE WORLD AROUND YOU
+            </span>
+
+            <h1>
+                See it. Scan it.
+                <span>Understand it.</span>
+            </h1>
+
+            <p>
+                Point your camera towards an object,
+                capture it and prepare it for AI recognition.
+            </p>
+
+        </section>
+
+
+        <!-- Scanner -->
+        <section class="scanner-card">
+
+            <div class="scanner-heading">
+
+                <div>
+                    <h2>Object Scanner</h2>
+                    <p>Place an object inside the scanning frame</p>
+                </div>
+
+                <div class="ready-indicator">
+                    <span class="status-dot"></span>
+                    READY
+                </div>
+
+            </div>
+
+
+            <!-- Camera preview -->
+            <div class="camera-container">
+
+                <video
+                    id="camera"
+                    autoplay
+                    playsinline
+                    muted>
+                </video>
+
+                <canvas id="canvas" hidden></canvas>
+
+                <img
+                    id="capturedImage"
+                    alt="Captured object preview">
+
+                <div id="placeholder" class="placeholder">
+
+                    <div class="camera-icon">⌑</div>
+
+                    <h3>Your scanning space</h3>
+
+                    <p>
+                        Open your camera or upload an image
+                    </p>
+
+                </div>
+
+                <!-- Scanning corners -->
+                <div class="scan-corners">
+
+                    <span class="corner top-left"></span>
+                    <span class="corner top-right"></span>
+                    <span class="corner bottom-left"></span>
+                    <span class="corner bottom-right"></span>
+
+                </div>
+
+            </div>
+
+
+            <!-- Scanner controls -->
+            <div class="scanner-controls">
+
+                <button id="startButton" class="btn primary">
+                    <span>◉</span> Open Camera
+                </button>
+
+                <button id="captureButton" class="btn sage" disabled>
+                    <span>◎</span> Capture Object
+                </button>
+
+                <button id="scanButton" class="btn blue" disabled>
+                    <span>✧</span> Identify Object
+                </button>
+
+                <label for="fileInput" class="btn upload">
+                    <span>↑</span> Upload Image
+                </label>
+
+                <input
+                    type="file"
+                    id="fileInput"
+                    accept="image/*"
+                    hidden>
+
+            </div>
+
+
+            <!-- Status -->
+            <div class="status-area">
+
+                <span class="status-symbol">✦</span>
+
+                <p id="status">
+                    Your scanner is ready.
+                </p>
+
+            </div>
+
+
+            <!-- Recognition result -->
+            <div class="result-card">
+
+                <div class="result-icon">✧</div>
+
+                <div class="result-content">
+
+                    <h3>Recognition Result</h3>
+
+                    <p id="objectName">
+                        Your identified object will appear here.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Reset -->
+            <button id="resetButton" class="reset-button">
+                ↻ Reset Scanner
+            </button>
+
+        </section>
+
+
+        <!-- Footer -->
+        <footer>
+
+            <p>SMARTSCAN-AI</p>
+
+            <span>
+                Intelligent recognition · Simple scanning
+            </span>
+
+        </footer>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

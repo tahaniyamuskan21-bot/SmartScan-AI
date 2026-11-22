@@ -1,0 +1,24 @@
+
+# Python virtual environment
+backend/venv/
+
+# AI model files
+*.pt
+*.pth
+*.onnx
+
+# Python cache files
+__pycache__/
+*.pyc
+
+# Backup folders
+SmartScan-AI-Backup/
+backup/
+backups/
+
+# Environment secrets
+.env
+
+# System files
+.DS_Store
+Thumbs.db
