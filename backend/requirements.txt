@@ -1,4 +1,10 @@
+
 flask
 flask-cors
 ultralytics
 pillow
+torch
+torchvision
+transformers
+gunicorn
+
